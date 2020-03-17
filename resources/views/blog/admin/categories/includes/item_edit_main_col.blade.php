@@ -59,7 +59,7 @@
                                     name="description"
                                     id="description"
                                     rows="3">
-                                {{ $item->description }}
+                                {{ old('description', $item->description) }}
                             </textarea>
                         </div>
                     </div>

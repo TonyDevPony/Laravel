@@ -46,7 +46,8 @@
                             @foreach($categoryList as $categoryOption)
                                 <option value="{{ $categoryOption->id }}"
                                     @if($categoryOption->id == $item->parent_id) selected @endif>
-                                    {{ $categoryOption->id }}. {{ $categoryOption->title }}
+                                    {{--{{ $categoryOption->id }}. {{ $categoryOption->title }}--}}
+                                    {{ $categoryOption->id_title }}
                                 </option>
                             @endforeach
                             </select>
@@ -58,9 +59,7 @@
                                     class="form-control"
                                     name="description"
                                     id="description"
-                                    rows="3">
-                                {{ old('description', $item->description) }}
-                            </textarea>
+                                    rows="3">{{ old('description', $item->description) }}</textarea>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Blog\Admin;
 use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Models\BlogCategory;
-use Illuminate\Http\Request;
 use App\Repositories\BlogCategoryRepository;
 
 class CategoryController extends BaseController

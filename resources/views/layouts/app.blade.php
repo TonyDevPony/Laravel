@@ -47,6 +47,9 @@
                                 <a class="nav-link" href="{{ route('blog.admin.categories.index') }}">
                                     blog.admin.categories
                                 </a>
+                                <a class="nav-link" href="{{ route('blog.admin.posts.index') }}">
+                                    blog.admin.posts
+                                </a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">

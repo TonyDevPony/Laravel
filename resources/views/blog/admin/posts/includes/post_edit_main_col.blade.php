@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group">
                             <label for="excerpt">Выдержка</label>
-                            <textarea name="excerpt" id="excerpt" rows="3">{{ old('excerpt', $item->excerpt) }}</textarea>
+                            <textarea class="form-control" name="excerpt" id="excerpt" rows="3">{{ old('excerpt', $item->excerpt) }}</textarea>
                         </div>
 
                         <div class="form-check">
@@ -63,7 +63,7 @@
                             <input type="checkbox"
                                    name="is_published"
                                    class="form-check-input"
-                                   value="{{ $item->is_published }}"
+                                   value="1"
                                    @if($item->is_published) checked="checked" @endif>
                             <label for="is_published" class="form_check-label">Опубликовано</label>
                         </div>

@@ -64,9 +64,9 @@ class CategoryController extends BaseController
         // dd(__METHOD__);
 
         $data = $request->input();
-        if(empty($data['slug'])) {
-            $data['slug'] = str_slug($data['title']);
-        }
+//        if(empty($data['slug'])) {
+//            $data['slug'] = str_slug($data['title']);
+//        }
 
         // Create object and add him in database
         $item = (new BlogCategory())->create($data);
@@ -107,7 +107,7 @@ class CategoryController extends BaseController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\BlogCategoryUpdateRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -123,9 +123,9 @@ class CategoryController extends BaseController
         }
 
         $data = $request->all();
-        if(empty($data['slug'])) {
-            $data['slug'] = str_slug($data['title']);
-        }
+//        if(empty($data['slug'])) {
+//            $data['slug'] = str_slug($data['title']);
+//        }
 
         $result = $item->update($data);
 

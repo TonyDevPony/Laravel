@@ -24,6 +24,9 @@ Route::group(['namespace' => 'Blog', 'prefix' => 'blog'], function (){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/calendar', 'GoogleCalendarController@index')->name('google.calendar');
+Route::get('/calendar/createEvent', 'GoogleCalendarController@createEvents')->name('createEvent');
+
 
 Route::group(['namespace' => 'Blog', 'prefix' => 'blog'], function (){
     Route::resource('posts', 'PostController')->names('blog.posts');
@@ -48,3 +51,8 @@ Route::group($groupData, function () {
         ->except(['show'])
         ->names('blog.admin.posts');
 });
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
